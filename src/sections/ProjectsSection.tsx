@@ -12,18 +12,20 @@ interface ProjectData {
     col1Bottom: string;
     col2: string;
   };
+  link?: string;
 }
 
 const projects: ProjectData[] = [
   {
     id: "01",
-    name: "Nextlevel Studio",
+    name: "Meredith Cultural event",
     category: "Client",
     images: {
-      col1Top: "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85",
-      col1Bottom: "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85",
-      col2: "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85",
+      col1Top: "/projects/meredith-1.jpeg",
+      col1Bottom: "/projects/meredith-2.jpeg",
+      col2: "/projects/meredith-3.jpeg",
     },
+    link: "https://m2k26.vercel.app/",
   },
   {
     id: "02",
@@ -90,7 +92,7 @@ const Card = ({
               </h3>
             </div>
           </div>
-          <LiveProjectButton className="hidden sm:flex" />
+          <LiveProjectButton className="hidden sm:flex" href={project.link} />
         </div>
 
         {/* Card Grid */}
@@ -108,7 +110,7 @@ const Card = ({
           </div>
         </div>
 
-        <LiveProjectButton className="flex sm:hidden w-full justify-center" />
+        <LiveProjectButton className="flex sm:hidden w-full justify-center" href={project.link} />
       </motion.div>
     </div>
   );

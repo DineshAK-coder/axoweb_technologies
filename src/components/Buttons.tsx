@@ -19,7 +19,20 @@ export const ContactButton = ({ className = "" }: { className?: string }) => {
   );
 };
 
-export const LiveProjectButton = ({ className = "" }: { className?: string }) => {
+export const LiveProjectButton = ({ className = "", href }: { className?: string, href?: string }) => {
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`rounded-full border-2 border-[#D7E2EA] px-8 py-3 sm:px-10 sm:py-3.5 text-sm sm:text-base font-medium uppercase tracking-widest text-[#D7E2EA] transition-colors hover:bg-[#D7E2EA]/10 active:scale-95 flex items-center justify-center cursor-pointer ${className}`}
+      >
+        Live Project
+      </a>
+    );
+  }
+
   return (
     <button
       className={`rounded-full border-2 border-[#D7E2EA] px-8 py-3 sm:px-10 sm:py-3.5 text-sm sm:text-base font-medium uppercase tracking-widest text-[#D7E2EA] transition-colors hover:bg-[#D7E2EA]/10 active:scale-95 ${className}`}
