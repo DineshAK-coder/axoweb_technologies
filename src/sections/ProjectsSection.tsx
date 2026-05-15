@@ -21,9 +21,9 @@ const projects: ProjectData[] = [
     name: "Meredith Cultural event",
     category: "Client",
     images: {
-      col1Top: "/projects/meredith-1.jpeg",
+      col1Top: "/projects/meredith-3.jpeg",
       col1Bottom: "/projects/meredith-2.jpeg",
-      col2: "/projects/meredith-3.jpeg",
+      col2: "/projects/meredith-1.jpeg",
     },
     link: "https://m2k26.vercel.app/",
   },
@@ -73,7 +73,7 @@ const Card = ({
       <motion.div
         style={{ 
           scale, 
-          top: `calc(7vh + ${index * (typeof window !== 'undefined' && window.innerWidth < 640 ? 15 : 25)}px)`,
+          top: `calc(7vh + ${index * (typeof window !== 'undefined' && window.innerWidth < 640 ? 50 : 80)}px)`,
           willChange: "transform"
         }}
         className="relative w-full max-w-6xl bg-[#0C0C0C] border-2 border-[#D7E2EA] rounded-[40px] sm:rounded-[50px] md:rounded-[60px] p-5 sm:p-8 md:p-10 flex flex-col gap-5 md:gap-8 shadow-2xl"
