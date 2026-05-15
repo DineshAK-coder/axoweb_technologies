@@ -100,18 +100,30 @@ const Card = ({
         </div>
 
         {/* Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-4 md:gap-6 flex-1 min-h-0">
-          <div className="flex flex-col gap-4 md:gap-6">
-            <div className="rounded-[40px] overflow-hidden flex-1 h-[clamp(80px,12vw,230px)]">
-              <img src={project.images.col1Top} alt="Project" className="w-full h-full object-cover" />
-            </div>
-            <div className="rounded-[40px] overflow-hidden flex-1 h-[clamp(110px,18vw,340px)]">
-              <img src={project.images.col1Bottom} alt="Project" className="w-full h-full object-cover" />
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-4 md:gap-6 flex-1 min-h-0 overflow-hidden pb-4 md:pb-0">
+          <div className="flex flex-col gap-4 md:gap-6 h-full min-h-0">
+            <motion.div 
+               whileHover={{ scale: 0.98 }}
+               transition={{ duration: 0.4, ease: "easeOut" }}
+               className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-1 relative bg-white/5 border border-white/5 group cursor-pointer"
+            >
+              <img src={project.images.col1Top} alt="Project Top" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 ease-out" />
+            </motion.div>
+            <motion.div 
+               whileHover={{ scale: 0.98 }}
+               transition={{ duration: 0.4, ease: "easeOut" }}
+               className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-[1.2] relative bg-white/5 border border-white/5 group cursor-pointer"
+            >
+              <img src={project.images.col1Bottom} alt="Project Bottom" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 ease-out" />
+            </motion.div>
           </div>
-          <div className="rounded-[40px] overflow-hidden h-[clamp(200px,30vw,600px)] md:h-auto">
-            <img src={project.images.col2} alt="Project" className="w-full h-full object-cover" />
-          </div>
+          <motion.div 
+             whileHover={{ scale: 0.98 }}
+             transition={{ duration: 0.4, ease: "easeOut" }}
+             className="rounded-[30px] md:rounded-[40px] overflow-hidden h-full min-h-[200px] relative bg-white/5 border border-white/5 group cursor-pointer"
+          >
+            <img src={project.images.col2} alt="Project Main" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 ease-out" />
+          </motion.div>
         </div>
 
         <LiveProjectButton className="flex sm:hidden w-full justify-center" href={project.link} />
