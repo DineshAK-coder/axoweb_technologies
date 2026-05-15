@@ -99,28 +99,34 @@ const Card = ({
           <LiveProjectButton className="hidden sm:flex" href={project.link} />
         </div>
 
-        {/* Card Grid */}
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6 flex-1 min-h-0 w-full overflow-hidden items-center justify-center pb-4 md:pb-0">
-          <motion.img 
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            src={project.images.col1Top} 
-            alt="Project Top" 
-            className="w-auto h-auto max-w-full max-h-[30%] md:max-w-[30%] md:max-h-full rounded-[20px] md:rounded-[30px] shadow-2xl object-contain cursor-pointer" 
-          />
-          <motion.img 
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            src={project.images.col1Bottom} 
-            alt="Project Bottom" 
-            className="w-auto h-auto max-w-full max-h-[30%] md:max-w-[30%] md:max-h-full rounded-[20px] md:rounded-[30px] shadow-2xl object-contain cursor-pointer" 
-          />
+        {/* Card Grid Collage */}
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10 flex-1 min-h-0 w-full overflow-hidden items-center justify-center pb-4 md:pb-0">
+          
+          {/* Column 1: Two smaller images */}
+          <div className="flex flex-row md:flex-col gap-4 md:gap-6 justify-center items-center">
+            <motion.img 
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              src={project.images.col1Top} 
+              alt="Project Top" 
+              className="w-auto h-auto max-w-[45vw] md:max-w-[280px] max-h-[25vh] md:max-h-[35vh] rounded-[20px] md:rounded-[30px] shadow-xl object-contain cursor-pointer" 
+            />
+            <motion.img 
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              src={project.images.col1Bottom} 
+              alt="Project Bottom" 
+              className="w-auto h-auto max-w-[45vw] md:max-w-[280px] max-h-[25vh] md:max-h-[35vh] rounded-[20px] md:rounded-[30px] shadow-xl object-contain cursor-pointer" 
+            />
+          </div>
+
+          {/* Column 2: One large main image */}
           <motion.img 
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             src={project.images.col2} 
             alt="Project Main" 
-            className="w-auto h-auto max-w-full max-h-[30%] md:max-w-[30%] md:max-h-full rounded-[20px] md:rounded-[30px] shadow-2xl object-contain cursor-pointer" 
+            className="w-auto h-auto max-w-[90vw] md:max-w-[500px] max-h-[40vh] md:max-h-[70vh] rounded-[24px] md:rounded-[40px] shadow-2xl object-contain cursor-pointer" 
           />
         </div>
 
