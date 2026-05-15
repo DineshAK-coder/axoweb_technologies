@@ -69,19 +69,22 @@ const Card = ({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div className="h-screen flex items-center justify-center sticky top-0">
+    <div 
+      className="h-screen w-full flex items-start justify-center sticky"
+      style={{ top: `calc(10vh + ${index * (typeof window !== 'undefined' && window.innerWidth < 640 ? 40 : 60)}px)` }}
+    >
       <motion.div
         style={{ 
           scale, 
-          top: `calc(7vh + ${index * (typeof window !== 'undefined' && window.innerWidth < 640 ? 50 : 80)}px)`,
+          transformOrigin: "top center",
           willChange: "transform"
         }}
-        className="relative w-full max-w-6xl bg-[#0C0C0C] border-2 border-[#D7E2EA] rounded-[40px] sm:rounded-[50px] md:rounded-[60px] p-5 sm:p-8 md:p-10 flex flex-col gap-5 md:gap-8 shadow-2xl"
+        className="relative w-full max-w-6xl bg-[#0C0C0C] border border-[#D7E2EA]/20 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] p-6 sm:p-8 md:p-10 flex flex-col gap-6 md:gap-8 shadow-2xl"
       >
         {/* Card Header */}
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-4 md:gap-8">
-            <span className="font-black text-[#D7E2EA] text-[clamp(1.5rem,4vw,64px)] italic leading-none">
+        <div className="flex flex-wrap items-center justify-between gap-4 pb-2 border-b border-white/5">
+          <div className="flex items-center gap-4 md:gap-6">
+            <span className="font-black text-[#D7E2EA]/20 text-[clamp(2rem,5vw,80px)] italic leading-none mr-2">
               {project.id}
             </span>
             <div className="flex flex-col">
