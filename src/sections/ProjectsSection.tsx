@@ -70,8 +70,8 @@ const Card = ({
 
   return (
     <div 
-      className="h-screen w-full flex items-start justify-center sticky"
-      style={{ top: `calc(10vh + ${index * (typeof window !== 'undefined' && window.innerWidth < 640 ? 40 : 60)}px)` }}
+      className="h-[120vh] w-full flex items-start justify-center sticky"
+      style={{ top: `calc(5vh + ${index * (typeof window !== 'undefined' && window.innerWidth < 640 ? 100 : 140)}px)` }}
     >
       <motion.div
         style={{ 
@@ -79,7 +79,7 @@ const Card = ({
           transformOrigin: "top center",
           willChange: "transform"
         }}
-        className="relative w-full max-w-6xl bg-[#0C0C0C] border border-[#D7E2EA]/20 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] p-6 sm:p-8 md:p-10 flex flex-col gap-6 md:gap-8 shadow-2xl"
+        className="relative w-full max-w-6xl bg-[#0C0C0C] border border-[#D7E2EA]/20 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] p-6 sm:p-8 md:p-10 flex flex-col gap-6 md:gap-8 shadow-2xl h-[85vh] max-h-[800px] overflow-hidden"
       >
         {/* Card Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-2 border-b border-white/5">
@@ -131,7 +131,7 @@ export const ProjectsSection = () => {
     <section 
       id="projects" 
       ref={containerRef}
-      className="relative bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 px-5 sm:px-8 md:px-10 pb-20"
+      className="relative bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 px-5 sm:px-8 md:px-10 pb-[30vh]"
     >
       <div className="pt-20 sm:pt-24 md:pt-32 mb-10 text-center">
         <FadeIn>
