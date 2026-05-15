@@ -59,22 +59,25 @@ export const HeroSection = () => {
       {/* Navbar */}
       <div className="fixed top-8 left-0 right-0 z-50 flex justify-center pointer-events-none">
         <FadeIn delay={0} y={-20} className="pointer-events-auto">
-          <div className="glass-nav scale-90 sm:scale-100">
+          <div className="glass-nav">
             <div className="glass-overlay" />
             <div className="glass-content">
               <nav className="flex items-center gap-1 md:gap-4 px-2">
                 <div className="flex items-center gap-2 px-3 py-2 mr-2 border-r border-white/10">
                   <img src="/axoweb-logo.png" alt="Logo" className="w-6 h-6 object-contain" />
-                  <span className="text-[#D7E2EA] font-bold text-sm tracking-tight hidden sm:block">AXOWEB</span>
+                  <span className="text-[#D7E2EA] font-bold text-sm tracking-tight hidden sm:block uppercase">Axoweb</span>
                 </div>
-                <a href="#about" className="px-4 py-2 text-[#D7E2EA] font-medium uppercase tracking-wider text-xs md:text-sm hover:text-white transition-colors">About</a>
-                <a href="#services" className="px-4 py-2 text-[#D7E2EA] font-medium uppercase tracking-wider text-xs md:text-sm hover:text-white transition-colors">Services</a>
-                <a href="#projects" className="px-4 py-2 text-[#D7E2EA] font-medium uppercase tracking-wider text-xs md:text-sm hover:text-white transition-colors">Projects</a>
+                <a href="#about" className="px-4 py-2 text-[#D7E2EA]/80 font-medium uppercase tracking-wider text-[11px] md:text-xs hover:text-white transition-all hover:scale-105">About</a>
+                <a href="#services" className="px-4 py-2 text-[#D7E2EA]/80 font-medium uppercase tracking-wider text-[11px] md:text-xs hover:text-white transition-all hover:scale-105">Services</a>
+                <a href="#projects" className="px-4 py-2 text-[#D7E2EA]/80 font-medium uppercase tracking-wider text-[11px] md:text-xs hover:text-white transition-all hover:scale-105">Projects</a>
+                
                 <button 
                   onClick={openModal} 
-                  className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-[#D7E2EA] font-medium uppercase tracking-wider text-xs md:text-sm transition-all cursor-pointer"
+                  className="glass-btn ml-2"
                 >
-                  Contact Us
+                  <span className="relative z-10 text-[11px] md:text-xs font-bold uppercase tracking-widest text-[#D7E2EA] group-hover:text-white transition-colors">
+                    Initialize
+                  </span>
                 </button>
               </nav>
             </div>
