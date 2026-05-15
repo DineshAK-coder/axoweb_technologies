@@ -100,30 +100,28 @@ const Card = ({
         </div>
 
         {/* Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-4 md:gap-6 flex-1 min-h-0 overflow-hidden pb-4 md:pb-0">
-          <div className="flex flex-col gap-4 md:gap-6 h-full min-h-0">
-            <motion.div 
-               whileHover={{ scale: 0.98 }}
-               transition={{ duration: 0.4, ease: "easeOut" }}
-               className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-1 relative bg-[#0C0C0C] border border-white/5 group cursor-pointer"
-            >
-              <img src={project.images.col1Top} alt="Project Top" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out" />
-            </motion.div>
-            <motion.div 
-               whileHover={{ scale: 0.98 }}
-               transition={{ duration: 0.4, ease: "easeOut" }}
-               className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-[1.2] relative bg-[#0C0C0C] border border-white/5 group cursor-pointer"
-            >
-              <img src={project.images.col1Bottom} alt="Project Bottom" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out" />
-            </motion.div>
-          </div>
-          <motion.div 
-             whileHover={{ scale: 0.98 }}
-             transition={{ duration: 0.4, ease: "easeOut" }}
-             className="rounded-[30px] md:rounded-[40px] overflow-hidden h-full min-h-[200px] relative bg-[#0C0C0C] border border-white/5 group cursor-pointer"
-          >
-            <img src={project.images.col2} alt="Project Main" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out" />
-          </motion.div>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 flex-1 min-h-0 w-full overflow-hidden items-center justify-center pb-4 md:pb-0">
+          <motion.img 
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            src={project.images.col1Top} 
+            alt="Project Top" 
+            className="w-auto h-auto max-w-full max-h-[30%] md:max-w-[30%] md:max-h-full rounded-[20px] md:rounded-[30px] shadow-2xl object-contain cursor-pointer" 
+          />
+          <motion.img 
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            src={project.images.col1Bottom} 
+            alt="Project Bottom" 
+            className="w-auto h-auto max-w-full max-h-[30%] md:max-w-[30%] md:max-h-full rounded-[20px] md:rounded-[30px] shadow-2xl object-contain cursor-pointer" 
+          />
+          <motion.img 
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            src={project.images.col2} 
+            alt="Project Main" 
+            className="w-auto h-auto max-w-full max-h-[30%] md:max-w-[30%] md:max-h-full rounded-[20px] md:rounded-[30px] shadow-2xl object-contain cursor-pointer" 
+          />
         </div>
 
         <LiveProjectButton className="flex sm:hidden w-full justify-center" href={project.link} />
