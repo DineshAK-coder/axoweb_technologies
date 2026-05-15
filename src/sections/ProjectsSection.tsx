@@ -105,24 +105,24 @@ const Card = ({
             <motion.div 
                whileHover={{ scale: 0.98 }}
                transition={{ duration: 0.4, ease: "easeOut" }}
-               className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-1 relative bg-white/5 border border-white/5 group cursor-pointer"
+               className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-1 relative bg-[#0C0C0C] border border-white/5 group cursor-pointer"
             >
-              <img src={project.images.col1Top} alt="Project Top" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 ease-out" />
+              <img src={project.images.col1Top} alt="Project Top" className="absolute inset-0 w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-700 ease-out" />
             </motion.div>
             <motion.div 
                whileHover={{ scale: 0.98 }}
                transition={{ duration: 0.4, ease: "easeOut" }}
-               className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-[1.2] relative bg-white/5 border border-white/5 group cursor-pointer"
+               className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-[1.2] relative bg-[#0C0C0C] border border-white/5 group cursor-pointer"
             >
-              <img src={project.images.col1Bottom} alt="Project Bottom" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 ease-out" />
+              <img src={project.images.col1Bottom} alt="Project Bottom" className="absolute inset-0 w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-700 ease-out" />
             </motion.div>
           </div>
           <motion.div 
              whileHover={{ scale: 0.98 }}
              transition={{ duration: 0.4, ease: "easeOut" }}
-             className="rounded-[30px] md:rounded-[40px] overflow-hidden h-full min-h-[200px] relative bg-white/5 border border-white/5 group cursor-pointer"
+             className="rounded-[30px] md:rounded-[40px] overflow-hidden h-full min-h-[200px] relative bg-[#0C0C0C] border border-white/5 group cursor-pointer"
           >
-            <img src={project.images.col2} alt="Project Main" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 ease-out" />
+            <img src={project.images.col2} alt="Project Main" className="absolute inset-0 w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-700 ease-out" />
           </motion.div>
         </div>
 
