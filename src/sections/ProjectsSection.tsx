@@ -107,16 +107,14 @@ const Card = ({
                transition={{ duration: 0.4, ease: "easeOut" }}
                className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-1 relative bg-[#0C0C0C] border border-white/5 group cursor-pointer"
             >
-              <img src={project.images.col1Top} alt="" className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-125 group-hover:scale-110 transition-transform duration-700 ease-out pointer-events-none" />
-              <img src={project.images.col1Top} alt="Project Top" className="absolute inset-0 w-full h-full object-contain p-6 md:p-10 z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-2xl" />
+              <img src={project.images.col1Top} alt="Project Top" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out" />
             </motion.div>
             <motion.div 
                whileHover={{ scale: 0.98 }}
                transition={{ duration: 0.4, ease: "easeOut" }}
                className="rounded-[30px] md:rounded-[40px] overflow-hidden flex-[1.2] relative bg-[#0C0C0C] border border-white/5 group cursor-pointer"
             >
-              <img src={project.images.col1Bottom} alt="" className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-125 group-hover:scale-110 transition-transform duration-700 ease-out pointer-events-none" />
-              <img src={project.images.col1Bottom} alt="Project Bottom" className="absolute inset-0 w-full h-full object-contain p-6 md:p-10 z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-2xl" />
+              <img src={project.images.col1Bottom} alt="Project Bottom" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out" />
             </motion.div>
           </div>
           <motion.div 
@@ -124,8 +122,7 @@ const Card = ({
              transition={{ duration: 0.4, ease: "easeOut" }}
              className="rounded-[30px] md:rounded-[40px] overflow-hidden h-full min-h-[200px] relative bg-[#0C0C0C] border border-white/5 group cursor-pointer"
           >
-            <img src={project.images.col2} alt="" className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-125 group-hover:scale-110 transition-transform duration-700 ease-out pointer-events-none" />
-            <img src={project.images.col2} alt="Project Main" className="absolute inset-0 w-full h-full object-contain p-6 md:p-12 z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
+            <img src={project.images.col2} alt="Project Main" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out" />
           </motion.div>
         </div>
 
